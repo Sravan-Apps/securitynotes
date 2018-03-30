@@ -13,13 +13,16 @@ navigator.sendBeacon(url [, data]);
 
 ## Parameters
 
-url
+url:
+
     The url parameter indicates the resolved URL to which the data is to be transmitted.
 
-data Optional
+data: Optional
+
     The data parameter is a ArrayBufferView, Blob, DOMString, or FormData object containing the data to be transmitted. 
 
-Return values
+Return values:
+
 The sendBeacon() method returns true if the user agent is able to successfully queue the data for transfer, Otherwise it returns false.
 
 
@@ -31,17 +34,20 @@ A Blob object represents a file-like object of immutable, raw data. Blobs repres
 To construct a Blob from other non-blob objects and data, use the Blob() constructor. 
 
 
-## Constructor
+## Blob Constructor
 
-Blob(blobParts[, options])
+Blob(blobParts[, options]):
+
     Returns a newly created Blob object whose content consists of the concatenation of the array of values given in parameter. 
 
 
 ## Properties
 
-Blob.size Read only
+Blob.size: Read only
+
     The size, in bytes, of the data contained in the Blob object.
-Blob.type Read only
+Blob.type: Read only
+
     A string indicating the MIME type of the data contained in the Blob. If the type is unknown, this string is empty. 
 
 
@@ -51,7 +57,7 @@ Blob.type Read only
 
 Chromium/Chorme 57 allowed to set arbitrarty Blob.type. So, By setting the Blob.type attacker can control only the Content-Type HTTP request header.
 
-Links:
+##Links:
 https://developers.google.com/web/updates/2017/06/chrome-60-deprecations#temporarily_disable_navigatorsendbeacon_for_some_blobs
 https://bugs.chromium.org/p/chromium/issues/detail?id=490015
 
@@ -59,6 +65,7 @@ Lets test with the vulnerable version of Chromium and see what parts of HTTP req
 
 Chromium Version(Vulnerable) 57.0.2987.98 Built on 8.7, running on Debian 8.7 (64-bit)
 
+```
 navigator.sendBeacon('http://localhost/',new Blob(['any-data'], {type: 'any/content-type'}))
 
 enjoy@debain:~$ sudo nc -l -k -p  80
@@ -77,7 +84,7 @@ Accept-Language: en-US,en;q=0.8
 
 any-data
 
-
+```
 On a patched Chrome Version 65.0.3325.181 (Official Build) (64-bit):
 
 navigator.sendBeacon('http://192.168.0.5/',new Blob(['any-data'], {type: 'any/content-type'}))
@@ -96,6 +103,7 @@ https://bugzilla.mozilla.org/show_bug.cgi?id=1080987
 
 Firefox ESR Debian 52.7.3 (64-bit) -Not vulnerable to this bug
 
+```
 navigator.sendBeacon('http://localhost/',new Blob(['any-data'], {type: 'any/content-type'}))
 
 enjoy@debain:~$ sudo nc -l -k -p  80
@@ -111,6 +119,7 @@ Origin: http://php.net
 DNT: 1
 Connection: keep-alive
 
+```
 
 # Flash:
 
