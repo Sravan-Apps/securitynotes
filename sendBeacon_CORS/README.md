@@ -163,7 +163,7 @@ For example, a site could reject all requests whose Origin indicated the request
 
 # Final Thoughts:
 
-Verifying Origin Header presense+ Domain value in Origin Header can be used to block CSRF attacks.
+Verifying Origin Header presense+ Domain value in Origin Header agaist the allowed domains can be used to block CSRF attacks.
 
 
 Synchroniser Token pattern adds additinal layer of security in case of client side security bugs of high severity.
