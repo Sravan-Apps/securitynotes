@@ -164,8 +164,12 @@ For example, a site could reject all requests whose Origin indicated the request
 # Final Thoughts:
 
 Verifying Origin Header presense+ Domain value in Origin Header can be used to block CSRF attacks.
+
+
 Synchroniser Token pattern adds additinal layer of security in case of client side security bugs of high severity.
-Adding anti-csrf tokens to existing REST api can be a huge effort.A simple trade of can be to move the cookie/session token to a header.
+
+
+Adding anti-csrf tokens to existing REST api can be a huge effort.A simple trade off can be to move the cookie/sessiontoken to a header.
 
 # References:
 https://medium.com/@longtermsec/chrome-just-hardened-the-navigator-beacon-api-against-cross-site-request-forgery-csrf-690239ccccf
@@ -182,4 +186,4 @@ https://helpx.adobe.com/flash-player/kb/arbitrary-headers-sent-flash-player.html
 
 https://helpx.adobe.com/flash-player/kb/actionscript-error-send-action-contains.html
 
-[hromium/Chrome]: https://github.com/Sravan-Apps/securitynotes/tree/master/sendBeacon_CORS#chromiumchrome
+[Chromium/Chrome]: https://github.com/Sravan-Apps/securitynotes/tree/master/sendBeacon_CORS#chromiumchrome
