@@ -174,7 +174,7 @@ Verifying Origin Header presense+ Domain value in Origin Header agaist the allow
 Synchroniser Token pattern adds additinal layer of security in case of client side security bugs of high severity.
 
 
-Adding anti-csrf tokens to existing REST api can be a huge effort.A simple trade off can be to move the cookie/sessiontoken to a header.
+Adding anti-csrf tokens to existing REST api can be a considerable effort.A simple trade off can be to move the cookie/sessiontoken to a header.
 
 # References:
 https://medium.com/@longtermsec/chrome-just-hardened-the-navigator-beacon-api-against-cross-site-request-forgery-csrf-690239ccccf
