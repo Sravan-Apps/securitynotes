@@ -152,7 +152,7 @@ The Origin header was proposed with the very poupose of defending against CSRF a
 
 ## Links: 
 
-Section 5 in https://seclab.stanford.edu/websec/csrf/csrf.pdf (from owasp CSRF_Prevention_Cheat_list page)
+Section 5 in https://seclab.stanford.edu/websec/csrf/csrf.pdf (from owasp [CSRF_Prevention_Cheat_list page])
 
 Copied from Page 8 of above pdf
 
@@ -195,3 +195,4 @@ https://www.owasp.org/index.php/Cross-Site_Request_Forgery_%28CSRF%29_Prevention
 
 [Chromium/Chrome]: https://github.com/Sravan-Apps/securitynotes/tree/master/sendBeacon_CORS#chromiumchrome
 [Medium.com]: https://medium.com/@longtermsec/chrome-just-hardened-the-navigator-beacon-api-against-cross-site-request-forgery-csrf-690239ccccf
+[CSRF_Prevention_Cheat_list page]: https://www.owasp.org/index.php/Cross-Site_Request_Forgery_%28CSRF%29_Prevention_Cheat_Sheet
