@@ -183,10 +183,6 @@ https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon
 
 https://developer.mozilla.org/en-US/docs/Web/API/Blob
 
-https://www.cnet.com/products/adobe-flash-player-9/preview/ 
-
-https://www.engadget.com/2010/06/10/adobe-flash-player-10-1-now-officially-available-for-download/
-
 https://helpx.adobe.com/flash-player/kb/arbitrary-headers-sent-flash-player.html
 
 https://helpx.adobe.com/flash-player/kb/actionscript-error-send-action-contains.html
