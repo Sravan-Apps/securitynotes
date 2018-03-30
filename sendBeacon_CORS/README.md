@@ -57,7 +57,7 @@ Blob.type: Read only
 
 Chromium/Chorme 57 allowed to set arbitrarty Blob.type. So, By setting the Blob.type attacker can control only the Content-Type HTTP request header.
 
-##Links:
+## Links:
 https://developers.google.com/web/updates/2017/06/chrome-60-deprecations#temporarily_disable_navigatorsendbeacon_for_some_blobs
 https://bugs.chromium.org/p/chromium/issues/detail?id=490015
 
@@ -87,11 +87,12 @@ any-data
 ```
 On a patched Chrome Version 65.0.3325.181 (Official Build) (64-bit):
 
+```
 navigator.sendBeacon('http://192.168.0.5/',new Blob(['any-data'], {type: 'any/content-type'}))
 
 VM103:1 Uncaught DOMException: Failed to execute 'sendBeacon' on 'Navigator': sendBeacon() with a Blob whose type is not any of the CORS-safelisted values for the Content-Type request header is disabled temporarily. See http://crbug.com/490015 for details.
     at <anonymous>:1:1
-
+```
 # Firefox:
 
 Firefox 35 doesnot use  to send the  Origin Header and have not  treated seadBeacon requests as CORS. This is equivallent to a POST form submit.
