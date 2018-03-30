@@ -191,5 +191,7 @@ https://helpx.adobe.com/flash-player/kb/arbitrary-headers-sent-flash-player.html
 
 https://helpx.adobe.com/flash-player/kb/actionscript-error-send-action-contains.html
 
+https://www.owasp.org/index.php/Cross-Site_Request_Forgery_%28CSRF%29_Prevention_Cheat_Sheet
+
 [Chromium/Chrome]: https://github.com/Sravan-Apps/securitynotes/tree/master/sendBeacon_CORS#chromiumchrome
 [Medium.com]: https://medium.com/@longtermsec/chrome-just-hardened-the-navigator-beacon-api-against-cross-site-request-forgery-csrf-690239ccccf
