@@ -63,6 +63,8 @@ Chromium/Chorme 57 allowed to set arbitrarty Blob.type. So, By setting the Blob.
 
 ## Links:
 https://developers.google.com/web/updates/2017/06/chrome-60-deprecations#temporarily_disable_navigatorsendbeacon_for_some_blobs
+
+
 https://bugs.chromium.org/p/chromium/issues/detail?id=490015
 
 Lets test with the vulnerable version of Chromium and see what parts of HTTP request the attacker can control.
@@ -101,8 +103,10 @@ VM103:1 Uncaught DOMException: Failed to execute 'sendBeacon' on 'Navigator': se
 
 Firefox 35 doesnot use  to send the  Origin Header and have not  treated seadBeacon requests as CORS. This is equivallent to a POST form submit.
 
-Links: 
+### Links: 
 https://www.mozilla.org/en-US/security/advisories/mfsa2015-03/
+
+
 https://bugzilla.mozilla.org/show_bug.cgi?id=1080987
 
 
