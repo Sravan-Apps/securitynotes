@@ -5,13 +5,15 @@ If you are aware of the navigator.sendBeacon then you can skip to section Chromi
 
 # Introduction :
 
+## navigator.sendBeacon:
+
 The navigator.sendBeacon() method can be used to asynchronously transfer a small amount of data over HTTP to a web server.
 
-## Syntax
+### Syntax
 
 navigator.sendBeacon(url [, data]);
 
-## Parameters
+### Parameters
 
 url:
 
@@ -28,20 +30,20 @@ The sendBeacon() method returns true if the user agent is able to successfully q
 
 The integreting thing about the sendBeacon here is the data parameter accepts a Blob object.
 
-
+## Bolb:
 
 A Blob object represents a file-like object of immutable, raw data. Blobs represent data that isn't necessarily in a JavaScript-native format.
 To construct a Blob from other non-blob objects and data, use the Blob() constructor. 
 
 
-## Blob Constructor
+### Blob Constructor
 
 Blob(blobParts[, options]):
 
     Returns a newly created Blob object whose content consists of the concatenation of the array of values given in parameter. 
 
 
-## Properties
+### Properties
 
 Blob.size: Read only
 
