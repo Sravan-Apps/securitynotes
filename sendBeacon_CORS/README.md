@@ -1,7 +1,9 @@
 This page analyses the impact of Chromium's navigator.sendBeacon bug 490015 against CORS CSRF protections
 and Firefox's navigator.sendBeacon bug 1080987.
 
-If you are aware of the navigator.sendBeacon then you can skip to section [Chromium/Chrome]
+If you are aware of the navigator.sendBeacon then you can skip to section [Chromium/Chrome].
+
+
 # Introduction :
 
 
