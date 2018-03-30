@@ -135,12 +135,13 @@ Connection: keep-alive
 Flash player 7 and 8 use to have no restrictions on Addidng arbitrary headers. 
 But that was fixed in a security patch to Flash palyer 7 around 2007.
 
-(Copied from Medium.com)
+(Copied from [Medium.com])
 
 Flash with 307 redirects can still be abused to achieve the same primitive for cross origin requests with an arbitrary content type. 
+Attacker can control only the Content-Type HTTP request header.
 
 
-Summary (Copied from Medium.com):
+Summary (Copied from [Medium.com]):
  
 Established best practices include verifying the Origin header, sending custom headers, and the Synchroniser Token pattern. 
 
@@ -191,3 +192,4 @@ https://helpx.adobe.com/flash-player/kb/arbitrary-headers-sent-flash-player.html
 https://helpx.adobe.com/flash-player/kb/actionscript-error-send-action-contains.html
 
 [Chromium/Chrome]: https://github.com/Sravan-Apps/securitynotes/tree/master/sendBeacon_CORS#chromiumchrome
+[Medium.com]: https://medium.com/@longtermsec/chrome-just-hardened-the-navigator-beacon-api-against-cross-site-request-forgery-csrf-690239ccccf
