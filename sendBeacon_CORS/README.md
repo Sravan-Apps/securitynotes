@@ -3,15 +3,15 @@ and Firefox's navigator.sendBeacon bug 1080987.
 
 If you are aware of the navigator.sendBeacon then you can skip to section Chromium/Chrome.
 
-#Introduction :
+# Introduction :
 
 The navigator.sendBeacon() method can be used to asynchronously transfer a small amount of data over HTTP to a web server.
 
-##Syntax
+## Syntax
 
 navigator.sendBeacon(url [, data]);
 
-##Parameters
+## Parameters
 
 url
     The url parameter indicates the resolved URL to which the data is to be transmitted.
@@ -31,13 +31,13 @@ A Blob object represents a file-like object of immutable, raw data. Blobs repres
 To construct a Blob from other non-blob objects and data, use the Blob() constructor. 
 
 
-##Constructor
+## Constructor
 
 Blob(blobParts[, options])
     Returns a newly created Blob object whose content consists of the concatenation of the array of values given in parameter. 
 
 
-##Properties
+## Properties
 
 Blob.size Read only
     The size, in bytes, of the data contained in the Blob object.
@@ -47,7 +47,7 @@ Blob.type Read only
 
 
 
-#Chromium/Chrome:
+# Chromium/Chrome:
 
 Chromium/Chorme 57 allowed to set arbitrarty Blob.type. So, By setting the Blob.type attacker can control only the Content-Type HTTP request header.
 
@@ -61,7 +61,7 @@ Chromium Version(Vulnerable) 57.0.2987.98 Built on 8.7, running on Debian 8.7 (6
 
 navigator.sendBeacon('http://localhost/',new Blob(['any-data'], {type: 'any/content-type'}))
 
-enjoy@village:~$ sudo nc -l -k -p  80
+enjoy@debain:~$ sudo nc -l -k -p  80
 POST / HTTP/1.1
 Host: localhost
 Connection: keep-alive
@@ -85,7 +85,7 @@ navigator.sendBeacon('http://192.168.0.5/',new Blob(['any-data'], {type: 'any/co
 VM103:1 Uncaught DOMException: Failed to execute 'sendBeacon' on 'Navigator': sendBeacon() with a Blob whose type is not any of the CORS-safelisted values for the Content-Type request header is disabled temporarily. See http://crbug.com/490015 for details.
     at <anonymous>:1:1
 
-#Firefox:
+# Firefox:
 
 Firefox 35 doesnot use  to send the  Origin Header and have not  treated seadBeacon requests as CORS. This is equivallent to a POST form submit.
 
@@ -98,7 +98,7 @@ Firefox ESR Debian 52.7.3 (64-bit) -Not vulnerable to this bug
 
 navigator.sendBeacon('http://localhost/',new Blob(['any-data'], {type: 'any/content-type'}))
 
-enjoy@village:~$ sudo nc -l -k -p  80
+enjoy@debain:~$ sudo nc -l -k -p  80
 OPTIONS / HTTP/1.1
 Host: localhost
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0
@@ -112,7 +112,7 @@ DNT: 1
 Connection: keep-alive
 
 
-#Flash:
+# Flash:
 
 Flash player 7 and 8 use to have no restrictions on Addidng arbitrary headers. 
 But that was fixed in a security patch to Flash palyer 7 around 2007.
@@ -127,11 +127,11 @@ Summary (Copied from Medium.com):
 Established best practices include verifying the Origin header, sending custom headers, and the Synchroniser Token pattern. 
 
 
-#The Origin Headers role in CSRF defense:
+# The Origin Headers role in CSRF defense:
 
 The Origin header was proposed with the very poupose of defending against CSRF attacks.
 
-##Links: 
+## Links: 
 
 Section 5 in https://seclab.stanford.edu/websec/csrf/csrf.pdf (from owasp CSRF_Prevention_Cheat_list page)
 
@@ -147,13 +147,13 @@ state-modifying GET requests must be blocked in order to address the forum poste
 For example, a site could reject all requests whose Origin indicated the request was initiated from another site.
 
 
-#Final Thoughts:
+# Final Thoughts:
 
 Verifying Origin Header presense+ Domain value in Origin Header can be used to block CSRF attacks.
 Synchroniser Token pattern adds additinal layer of security in case of client side security bugs of high severity.
-Adding anti-csrf tokens to existing REST api can be a huge task.A simple trade of can be to move the cookie/session token to a header.
+Adding anti-csrf tokens to existing REST api can be a huge effort.A simple trade of can be to move the cookie/session token to a header.
 
-#References:
+# References:
 https://medium.com/@longtermsec/chrome-just-hardened-the-navigator-beacon-api-against-cross-site-request-forgery-csrf-690239ccccf
 
 https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon
