@@ -1,8 +1,7 @@
 This page analyses the impact of Chromium's navigator.sendBeacon bug 490015 against CORS CSRF protections
 and Firefox's navigator.sendBeacon bug 1080987.
 
-If you are aware of the navigator.sendBeacon then you can skip to section [Chromium/Chrome] (https://github.com/Sravan-Apps/securitynotes/tree/master/sendBeacon_CORS#chromiumchrome).
-
+If you are aware of the navigator.sendBeacon then you can skip to section [Chromium/Chrome]
 # Introduction :
 
 
@@ -178,3 +177,4 @@ https://www.engadget.com/2010/06/10/adobe-flash-player-10-1-now-officially-avail
 https://helpx.adobe.com/flash-player/kb/arbitrary-headers-sent-flash-player.html
 https://helpx.adobe.com/flash-player/kb/actionscript-error-send-action-contains.html
 
+[hromium/Chrome]: https://github.com/Sravan-Apps/securitynotes/tree/master/sendBeacon_CORS#chromiumchrome
