@@ -171,12 +171,15 @@ Adding anti-csrf tokens to existing REST api can be a huge effort.A simple trade
 https://medium.com/@longtermsec/chrome-just-hardened-the-navigator-beacon-api-against-cross-site-request-forgery-csrf-690239ccccf
 
 https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon
+
 https://developer.mozilla.org/en-US/docs/Web/API/Blob
 
-https://www.cnet.com/products/adobe-flash-player-9/preview/ Falsh player 9 is from 2006
-https://www.engadget.com/2010/06/10/adobe-flash-player-10-1-now-officially-available-for-download/ Flash player 10 from 2010
+https://www.cnet.com/products/adobe-flash-player-9/preview/ 
+
+https://www.engadget.com/2010/06/10/adobe-flash-player-10-1-now-officially-available-for-download/
 
 https://helpx.adobe.com/flash-player/kb/arbitrary-headers-sent-flash-player.html
+
 https://helpx.adobe.com/flash-player/kb/actionscript-error-send-action-contains.html
 
 [hromium/Chrome]: https://github.com/Sravan-Apps/securitynotes/tree/master/sendBeacon_CORS#chromiumchrome
