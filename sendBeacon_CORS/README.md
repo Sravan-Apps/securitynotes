@@ -101,7 +101,7 @@ VM103:1 Uncaught DOMException: Failed to execute 'sendBeacon' on 'Navigator': se
 ```
 # Firefox:
 
-Firefox 35 doesnot use  to send the  Origin Header and have not  treated seadBeacon requests as CORS. This is equivallent to a POST form submit.
+Firefox 35 does not use  to send the  Origin Header and have not  treated seadBeacon requests as CORS. This is equivallent to a POST form submit.
 
 ### Links: 
 https://www.mozilla.org/en-US/security/advisories/mfsa2015-03/
